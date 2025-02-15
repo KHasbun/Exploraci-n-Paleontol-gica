@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body class="has-background-dark has-text-white">
+    <!-- Contenedor para el navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Contenido principal de la página -->
+    <section class="hero is-medium has-background-dark">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-white">Bienvenidos a la Paleontología</h1>
+          <p class="subtitle has-text-white">
+            Explora el mundo de los dinosaurios, fósiles y recreaciones de
+            esqueletos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered has-text-white">
+          Recreación de Esqueletos de Dinosaurios
+        </h1>
+        <p class="subtitle has-text-centered has-text-white">
+          Explorando cómo se reconstruyen los esqueletos de dinosaurios a partir
+          de fósiles
+        </p>
+
+        <div class="content has-text-white">
+          <h2>1. Introducción</h2>
+          <p>
+            La reconstrucción de esqueletos de dinosaurios es un proceso
+            complejo que combina paleontología, anatomía comparada y tecnología
+            moderna.
+          </p>
+
+          <h2>2. Proceso de Reconstrucción</h2>
+          <div class="box has-background-grey-dark has-text-white">
+            <h3>Descubrimiento y Excavación</h3>
+            <p>
+              Los fósiles se descubren en excavaciones y se extraen
+              cuidadosamente para su estudio.
+            </p>
+            <figure class="image">
+              <img
+                src="/dinos/imagenes/fosiles1.jpeg"
+                alt="Imagen de excavación de fósiles"
+                style="height: 350px; object-fit: fill"
+              />
+            </figure>
+          </div>
+          <div class="box has-background-grey-dark has-text-white">
+            <h3>Limpieza y Estudio</h3>
+            <p>
+              Los huesos se limpian y comparan con otros dinosaurios para
+              determinar su estructura.
+            </p>
+            <figure class="image">
+              <img
+                src="/dinos/imagenes/fosiles2.jpeg"
+                alt="Imagen de limpieza de fósiles"
+                style="height: 350px; object-fit: fill"
+              />
+            </figure>
+          </div>
+          <div class="box has-background-grey-dark has-text-white">
+            <h3>Reconstrucción Digital y Física</h3>
+            <p>
+              Se utilizan escaneos 3D y modelado digital para recrear partes
+              faltantes.
+            </p>
+            <figure class="image">
+              <img
+                src="/dinos/imagenes/fosiles3.jpeg"
+                alt="Imagen de reconstrucción digital de un dinosaurio"
+                style="height: 350px; object-fit: fill"
+              />
+            </figure>
+          </div>
+
+          <div class="box has-background-grey-dark has-text-white">
+            <h2>3. Caso del Spinosaurus</h2>
+            <p>
+              El Spinosaurus ha sido objeto de múltiples reconstrucciones debido
+              a nuevos hallazgos.
+            </p>
+            <figure class="image">
+              <img
+                src="/dinos/imagenes/espino.webp"
+                alt="Esqueleto del Spinosaurus"
+              />
+            </figure>
+          </div>
+
+          <div class="box has-background-grey-dark has-text-white">
+            <p>
+              Inicialmente se pensaba que caminaba en dos patas, pero nuevas
+              evidencias sugieren que tenía una cola adaptada a la natación.
+            </p>
+            <figure class="image">
+              <img
+                src="/dinos/imagenes/2025.webp"
+                alt="Ilustración de la nueva reconstrucción del Spinosaurus"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Acerca de Nosotros -->
+    <section id="Acerca_Nostros" class="section has-background-grey-dark">
+      <div class="container">
+        <h2 class="title is-3 has-text-white has-text-centered">
+          Acerca de Nosotros
+        </h2>
+        <div class="columns is-vcentered">
+          <div class="column is-6">
+            <p class="has-text-white">
+              En <strong>Paleontología Dinámica</strong>, nuestra misión es
+              explorar, descubrir y compartir el fascinante mundo de los
+              dinosaurios. A través de estudios de fósiles, recreaciones
+              científicas y tecnología de vanguardia, nos dedicamos a revivir la
+              historia prehistórica para educar e inspirar a futuras
+              generaciones.
+            </p>
+            <p class="has-text-white">
+              Nuestro equipo está formado por paleontólogos, investigadores y
+              entusiastas apasionados que trabajan incansablemente para
+              desenterrar los secretos del pasado. ¡Únete a nuestra aventura y
+              descubre un mundo perdido en el tiempo!
+            </p>
+          </div>
+          <div class="column is-6">
+            <img
+              src="/dinos/imagenes/fondo.jpeg"
+              alt="Exploración Paleontológica"
+              class="image is-fullwidth"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenedor para el footer -->
+    <div id="footer-container"></div>
+
+    <!-- Cargar el navbar y el footer desde archivos externos -->
+    <script>
+      // Cargar el navbar desde navbar.html
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error al cargar el archivo navbar.html:", error);
+        });
+
+      // Cargar el footer desde footer.html
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error al cargar el archivo footer.html:", error);
+        });
+    </script>
+  </body>
+</html>
